@@ -1,36 +1,82 @@
 
-/*This is a comment in CSS*/
+html {
+    background-image: url(../assets/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 
-body{
+body {
     font-family: Verdana, sans-serif;
     margin: 0;
 }
 
+
+
 header h1{
-    font-size: 35px;
+    font-size: 70px;
     margin:20px 0;
+    text-align: center;
 }
 header h2{
-    font-size: 20px;
+    font-size: 50px;
     margin: 0px 0px 40px 0px;
     font-weight: normal;
     font-style: italic;
+    text-align: center;
+}
+
+header h3{
+    font-size: 50px;
+    margin: 0px 0px 40px 0px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
 }
 
 main.documentation-page h3{
     margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
 }
 
+main.documentation-page h4{
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+main.documentation-page h5{
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+main.documentation-page h6{
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+main.documentation-page h7{
+    font-size: 30px;
+    line-height: 1.6em;
+    margin: 2.5em 0;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
 li{
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6em;
 }
 p{
-    font-size: 16px;
+    font-size: 30px;
     line-height: 1.6em;
     margin: 2.5em 0;
     font-family: Helvetica, sans-serif;
+ 
 }
 
 main,
@@ -101,6 +147,9 @@ img{
     display: flex; /* all children will now be flex items */
     flex-direction: row; /* other option is column */
     flex-wrap: wrap; /* means the children will wrap to a new line */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+   
 }
 
 .flex-item{
@@ -111,6 +160,7 @@ img{
     flex-basis: 25%; /*width of the box, take up a quarter of the parent's size*/
     box-sizing: border-box; /*this means that we can add padding, line below, and still only take 25% width of parent*/
     padding: 5px;
+    text-align: center;
 }
 
 .flex-basis-third .flex-item{
@@ -164,42 +214,4 @@ img{
 /* Extra large */
 
 
-    @media screen and (max-width: 1200px) {
-        * body {
-          background-color: rgb(191, 240, 236);
-        } *
     
-        .flex-item{
-            flex-basis: 33.33%; /*width of the box, take up a quarter of the parent's size*/
-        }
-    }
-    
-    /* Large */
-    @media screen and (max-width: 992px) {
-        * body {
-          background-color: rgb(220, 212, 232);
-        } *
-    
-    }
-    
-    /* Medium */
-    @media screen and (max-width: 768px) {
-        * body {
-          background-color: rgb(255, 226, 225);
-        } *
-    
-        .flex-item{
-            flex-basis: 50%; /*width of the box, take up a quarter of the parent's size*/
-        }
-    }
-    
-    /* Small */
-    @media screen and (max-width: 576px) {
-        * body {
-          background-color: rgb(223, 241, 255);
-        } *
-    
-        .flex-item{
-            flex-basis: 100%; /*width of the box, take up a quarter of the parent's size*/
-        }
-    }
